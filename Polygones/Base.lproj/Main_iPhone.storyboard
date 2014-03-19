@@ -13,34 +13,57 @@
                         <viewControllerLayoutGuide type="bottom" id="QLH-iw-BkW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="3" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="haU-FU-4O5">
-                                <rect key="frame" x="113" y="69" width="94" height="29"/>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="3" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="haU-FU-4O5">
+                                <rect key="frame" x="20" y="57" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="click:" destination="vXZ-lx-hvc" eventType="valueChanged" id="6Dh-kM-jzZ"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom du Polygone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV6-cF-ynm">
-                                <rect key="frame" x="91" y="29" width="138" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du Polygone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV6-cF-ynm">
+                                <rect key="frame" x="91" y="28" width="386" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ce polygone à X cotés" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-Ds-Zh8">
-                                <rect key="frame" x="20" y="116" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ce polygone à X cotés" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-Ds-Zh8">
+                                <rect key="frame" x="20" y="94" width="528" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mJ-AX-ZtY" customClass="PolygoneView">
+                                <rect key="frame" x="20" y="123" width="528" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IV6-cF-ynm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="91" id="3XU-UG-QJM"/>
+                            <constraint firstItem="ndC-Ds-Zh8" firstAttribute="top" secondItem="haU-FU-4O5" secondAttribute="bottom" constant="8" symbolic="YES" id="DXy-4P-BBP"/>
+                            <constraint firstAttribute="trailing" secondItem="ndC-Ds-Zh8" secondAttribute="trailing" constant="20" id="Mee-vv-UCB"/>
+                            <constraint firstItem="4mJ-AX-ZtY" firstAttribute="top" secondItem="ndC-Ds-Zh8" secondAttribute="bottom" constant="8" symbolic="YES" id="OY5-v3-pnd"/>
+                            <constraint firstItem="IV6-cF-ynm" firstAttribute="top" secondItem="Zq8-oP-Bt7" secondAttribute="bottom" constant="20" symbolic="YES" id="PkB-cz-Jyk"/>
+                            <constraint firstItem="haU-FU-4O5" firstAttribute="top" secondItem="IV6-cF-ynm" secondAttribute="bottom" constant="8" symbolic="YES" id="S8m-HL-fe5"/>
+                            <constraint firstAttribute="trailing" secondItem="haU-FU-4O5" secondAttribute="trailing" constant="20" symbolic="YES" id="drO-6N-4to"/>
+                            <constraint firstAttribute="trailing" secondItem="IV6-cF-ynm" secondAttribute="trailing" constant="91" id="jUa-nN-tJq"/>
+                            <constraint firstItem="4mJ-AX-ZtY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="jba-3u-PBl"/>
+                            <constraint firstItem="haU-FU-4O5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="r4w-TA-3n8"/>
+                            <constraint firstItem="ndC-Ds-Zh8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="vPc-Yk-rhr"/>
+                            <constraint firstItem="QLH-iw-BkW" firstAttribute="top" secondItem="4mJ-AX-ZtY" secondAttribute="bottom" constant="20" symbolic="YES" id="xK2-Zo-mN0"/>
+                            <constraint firstAttribute="trailing" secondItem="4mJ-AX-ZtY" secondAttribute="trailing" constant="20" symbolic="YES" id="zgb-P4-X1F"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="ndC-Ds-Zh8" id="9an-rE-4uK"/>
+                        <outlet property="polygoneView" destination="4mJ-AX-ZtY" id="eLY-9w-3OJ"/>
                         <outlet property="titleLabel" destination="IV6-cF-ynm" id="n2I-Ze-yzg"/>
                     </connections>
                 </viewController>
